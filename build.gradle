@@ -15,7 +15,12 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-}
+	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.4.6'
+	//compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa'
+	//runtime group: 'com.h2database', name: 'h2', version: '1.4.193'
+   // compile group: 'com.h2database', name: 'h2', version: '1.4.200'
+   runtimeOnly 'com.h2database:h2'
+	 }
 
 test {
 	useJUnitPlatform()

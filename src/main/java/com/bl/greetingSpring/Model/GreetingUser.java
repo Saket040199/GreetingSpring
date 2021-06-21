@@ -18,7 +18,9 @@ public class GreetingUser {
 	}
 	@Override
 	public String toString() {
-		return "GreetingUser [firstName=" + firstName + ", lastName=" + lastName + "]";
+		String str = (firstName != null) ? firstName + " " : "";
+		str += (lastName !=null) ? lastName : "";
+		return str.trim();
 	}
 	
 	
