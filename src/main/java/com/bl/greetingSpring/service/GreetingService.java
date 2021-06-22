@@ -38,5 +38,11 @@ public class GreetingService implements IGreetingService{
 	public void deleteEntries(long id) {
 		greetingRepository.deleteById(id);
 	}
+
+	@Override
+	public Greeting editEntries(GreetingUser user, long id) {
+		String message = String.format(template, (user.toString().isEmpty())?"Hello World" :user.toString());
+		return greetingRepository.save(new Greeting(id,message));
+	}
 	
 }
